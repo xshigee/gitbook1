@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "sequence", 
+        "flowchart", 
+        "uml"
+    ],
+    "pluginsConfig": {
+        "sequence": {
+            "theme": "simple"
+        },
+        "mathjax": {
+            "forceSVG": true
+        },
+        "theme-default": {
+            "showLevel": false
+        }
+    },
+    "styles": {
+        "website": "./styles/site.scss",
+        "pdf": "./styles/pdf.scss"
+    }
+}

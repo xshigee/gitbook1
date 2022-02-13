@@ -1,0 +1,739 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MicroPython/CircuitPython Performance Test · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="X11Carbon_linux_install.html" />
+    
+    
+    <link rel="prev" href="SSD_benchmark.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="dfu-util_latest_install_md.html">
+            
+                <a href="dfu-util_latest_install_md.html">
+            
+                    
+                    dfu-util
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="gcc-arm-none-eabi_latest_install_md.html">
+            
+                <a href="gcc-arm-none-eabi_latest_install_md.html">
+            
+                    
+                    gcc-arm-none-eabi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="st-flash_latest_install_md.html">
+            
+                <a href="st-flash_latest_install_md.html">
+            
+                    
+                    st-flash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="newuser_pio.html">
+            
+                <a href="newuser_pio.html">
+            
+                    
+                    newuser_pio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="platformio_iini_arduino_md.html">
+            
+                <a href="platformio_iini_arduino_md.html">
+            
+                    
+                    platformio.ini for arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="SSD_benchmark.html">
+            
+                <a href="SSD_benchmark.html">
+            
+                    
+                    SSD benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="mp_cpy_Performance_Test_md.html">
+            
+                <a href="mp_cpy_Performance_Test_md.html">
+            
+                    
+                    MicroPython/CircuitPython Performance Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="X11Carbon_linux_install.html">
+            
+                <a href="X11Carbon_linux_install.html">
+            
+                    
+                    ThikPad X1 Carbon Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="ADSL2opt_md.html">
+            
+                <a href="ADSL2opt_md.html">
+            
+                    
+                    ADSL2opt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pio_Wio-Terminal_nixie-NTP_V2_md.html">
+            
+                <a href="pio_Wio-Terminal_nixie-NTP_V2_md.html">
+            
+                    
+                    Wio-Terminal_nixie-NTP_V2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="LovyanGFX_sketch_pio.html">
+            
+                <a href="LovyanGFX_sketch_pio.html">
+            
+                    
+                    LovyanGFX_sketch_pio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="M5CAMERA_CameraWebServer_md.html">
+            
+                <a href="M5CAMERA_CameraWebServer_md.html">
+            
+                    
+                    M5CAMERA_CameraWebServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="M5Core2_Arduino_install_md.html">
+            
+                <a href="M5Core2_Arduino_install_md.html">
+            
+                    
+                    M5Core2_Arduino_install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="WiFiAnalyzer_WIOT_M5C2_md.html">
+            
+                <a href="WiFiAnalyzer_WIOT_M5C2_md.html">
+            
+                    
+                    WiFiAnalyzer on Wi-Terminal/N5Core2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="M5Stack_uncannyEyes_md.html">
+            
+                <a href="M5Stack_uncannyEyes_md.html">
+            
+                    
+                    M5Stack uncannyEyes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="Wio_ExtFlashLoad_pio_md.html">
+            
+                <a href="Wio_ExtFlashLoad_pio_md.html">
+            
+                    
+                    Wio_ExtFlashLoad_pio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="MP_F767ZI_network_samples_md.html">
+            
+                <a href="MP_F767ZI_network_samples_md.html">
+            
+                    
+                    MP_F767ZI_network_samples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MicroPython/CircuitPython Performance Test</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>2021/2/7+  </p>
+<p>MicroPython CircuitPython Performace Test (v2)</p>
+<h1 id="micropython-circuitpython-performace-test-v2">MicroPython CircuitPython Performace Test (v2)</h1>
+<h2 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h2>
+<p>MicroPython/CircuitPython Performance Test
+&#x3053;&#x306E;&#x8A18;&#x4E8B;&#x306F;&#x300C;
+<a href="https://beta-notes.way-nifty.com/blog/2020/02/post-5ad431.html" target="_blank">MicroPython Performance Test</a>
+&#x300D;&#x3092;&#x898B;&#x76F4;&#x3057;&#x3066;&#x65B0;&#x305F;&#x306A;&#x7D50;&#x679C;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x7B2C;2&#x7248;&#x306B;&#x3042;&#x305F;&#x308B;&#x3002;</p>
+<h2 id="pyboradstm32&#x7528;micropython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">pyborad/STM32&#x7528;MicroPython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>PerformaceTest.py</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># Peformace Test</span>
+
+<span class="hljs-keyword">import</span> pyb
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">performanceTest</span><span class="hljs-params">()</span>:</span>
+    millis = pyb.millis
+    endTime = millis() + <span class="hljs-number">10000</span>
+    count = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> millis() &lt; endTime:
+        count += <span class="hljs-number">1</span>
+    print(<span class="hljs-string">&quot;Count: &quot;</span>, count)
+
+performanceTest()
+</code></pre>
+<h2 id="esp32esp8266&#x7528;micropython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">ESP32/ESP8266&#x7528;MicroPython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>PerformaceTestESP32.py</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># Peformace Test for ESP32</span>
+<span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> RTC
+rtc = RTC()
+rtc.datetime((<span class="hljs-number">2020</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">48</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+<span class="hljs-comment"># (year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">performanceTest</span><span class="hljs-params">()</span>:</span>
+    secs = rtc.datetime()[<span class="hljs-number">6</span>]
+    endTime = secs + <span class="hljs-number">10</span>
+    count = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> rtc.datetime()[<span class="hljs-number">6</span>] &lt; endTime:
+        count += <span class="hljs-number">1</span>
+    print(<span class="hljs-string">&quot;Count: &quot;</span>, count)
+
+performanceTest()
+</code></pre>
+<h2 id="pcbaremetal-rpizeolinux-rpizeromaixduino&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">PC/BareMetal-RpiZeo/Linux-Rpizero/Maixduino&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>PerformanceRpiZero.py</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># Peformace Test RpiZero</span>
+<span class="hljs-keyword">import</span> time
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">performanceTest</span><span class="hljs-params">()</span>:</span>
+    msec = time.ticks_ms
+    endTime = msec() + <span class="hljs-number">10000</span>
+    count = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> msec() &lt; endTime:
+        count += <span class="hljs-number">1</span>
+    print(<span class="hljs-string">&quot;Count: &quot;</span>, count)
+
+performanceTest()
+</code></pre>
+<h2 id="cc3200&#x7528;micropython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">CC3200&#x7528;MicroPython&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>PerformanceTestCC3200.py</p>
+<pre><code>
+# Peformace Test for CC3200
+from machine import RTC
+rtc = RTC(datetime=(2020, 2, 9, 10, 11, 0, 0, None)) 
+
+def performanceTest():
+     secs = rtc.now()[5] 
+     endTime = secs + 10
+     count = 0
+     while rtc.now()[5] &lt; endTime:
+         count += 1
+     print(&quot;Count: &quot;, count)
+performanceTest()
+</code></pre><h2 id="circuitpythonpython3&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">CircuitPython/Python3&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>performanceTestCPY.py</p>
+<pre><code>
+# Peformace Test CircuitPython
+from time import monotonic_ns
+def performanceTest():
+    endTime = monotonic_ns() + 10000000000 # 10 sec
+    count = 0
+    while monotonic_ns() &lt; endTime:
+        count += 1
+    print(&quot;Count: &quot;, count)
+
+performanceTest()
+</code></pre><h2 id="xiao-circuitpython&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;">XIAO CircuitPython&#x7528;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;</h2>
+<p>PerformanceCircuitPython_XIAO.py</p>
+<pre><code>
+# Peformace Test XIAO CircuitPython
+from time import monotonic
+def performanceTest():
+    endTime = monotonic() + 10.0 # 10 sec
+    count = 0
+    while monotonic() &lt; endTime:
+        count += 1
+    print(&quot;Count: &quot;, count)
+
+performanceTest()
+</code></pre><h2 id="&#x5B9F;&#x884C;&#x4F8B;">&#x5B9F;&#x884C;&#x4F8B;</h2>
+<pre><code>
+# pyboard/STM32&#x306E;&#x5834;&#x5408;
+$ ./pyboard.py --device /dev/ttyACM0 PerformanceTest.py 
+Count:  2825625
+
+# ESP32/ESP866&#x306E;&#x5834;&#x5408;
+$ ./pyboard.py --device /dev/ttyUSB0 PerformanceTestESP32.py 
+Count:  39187
+</code></pre><h2 id="&#x7D50;&#x679C;">&#x7D50;&#x679C;</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x30DC;&#x30FC;&#x30C9;&#x540D;</th>
+<th style="text-align:center">M/C/P</th>
+<th style="text-align:right">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F767ZI</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">5,676,566</td>
+</tr>
+<tr>
+<td style="text-align:left">F446RE</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">2,825,625</td>
+</tr>
+<tr>
+<td style="text-align:left">F4Disco</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">2,882,769</td>
+</tr>
+<tr>
+<td style="text-align:left">Maixduino</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">2,218,879</td>
+</tr>
+<tr>
+<td style="text-align:left">Pico-MP</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">1,507,516</td>
+</tr>
+<tr>
+<td style="text-align:left">F401RE</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">1,362,752</td>
+</tr>
+<tr>
+<td style="text-align:left">L476RG</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">1,089,347</td>
+</tr>
+<tr>
+<td style="text-align:left">PyPortal</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">474,734</td>
+</tr>
+<tr>
+<td style="text-align:left">Grand-Central-M4-Express</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">445,404</td>
+</tr>
+<tr>
+<td style="text-align:left">Feather-M4-Express</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">438,444</td>
+</tr>
+<tr>
+<td style="text-align:left">Teensy4.0</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">432,413</td>
+</tr>
+<tr>
+<td style="text-align:left">Pico-CPY</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">341,033</td>
+</tr>
+<tr>
+<td style="text-align:left">XIAO</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">174,388</td>
+</tr>
+<tr>
+<td style="text-align:left">Circuit-Playground-Express</td>
+<td style="text-align:center">C</td>
+<td style="text-align:right">121,800</td>
+</tr>
+<tr>
+<td style="text-align:left">ESP8266</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">64,049</td>
+</tr>
+<tr>
+<td style="text-align:left">ESP32</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">39,187</td>
+</tr>
+<tr>
+<td style="text-align:left">CC3200</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">5,529</td>
+</tr>
+<tr>
+<td style="text-align:left">BareMetal-RpiZero</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">680,525</td>
+</tr>
+<tr>
+<td style="text-align:left">Linux-RpiZero</td>
+<td style="text-align:center">P</td>
+<td style="text-align:right">6,370,022</td>
+</tr>
+<tr>
+<td style="text-align:left">PC(linux)</td>
+<td style="text-align:center">P</td>
+<td style="text-align:right">161,265,687</td>
+</tr>
+<tr>
+<td style="text-align:left">micropython-Rpi4</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">16,117,283</td>
+</tr>
+<tr>
+<td style="text-align:left">python3-Rpi4</td>
+<td style="text-align:center">P</td>
+<td style="text-align:right">11,359,199</td>
+</tr>
+</tbody>
+</table>
+<p><a href=""></a>  </p>
+<p>M/C/P&#x306F;&#x3001;python&#x306E;&#x7A2E;&#x985E;&#x3092;&#x8868;&#x3057;&#x3001;<br>M:MicroPython&#x3001;<br>C:CircuitPython&#x3001;<br>P:Python3<br>&#x3092;&#x8868;&#x3059;&#x3002;</p>
+<h2 id="&#x30B3;&#x30E1;&#x30F3;&#x30C8;">&#x30B3;&#x30E1;&#x30F3;&#x30C8;</h2>
+<p>&#x30FB;Pico-MP&#x306F;&#x3001;RPI_Pico&#x30DC;&#x30FC;&#x30C9;&#x306E;
+MicroPython&#x3001;Pico-CPY&#x306F;&#x3001;RPI_Pico&#x30DC;&#x30FC;&#x30C9;&#x306E;CircuitPython&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x30FB;BareMetal-RpiZero&#x306F;&#x3001;RpiZero&#x3067;&#x306E;BareMetal&#x306E;micropython&#x3001; Linux-RpiZero&#x306F;&#x3001;linux&#x4E0A;&#x3067;&#x306E;micropython&#x3001; PC(Linux)&#x306F;&#x3001;PC&#x306E;Linux&#x4E0A;&#x3067;&#x306E;micropython&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x30FB;Maixduino&#x306F;Maixduino&#x306E;micropython&#x3067;&#x3042;&#x308B;MaixPy&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x3002;  </p>
+<p>&#x30FB;Teensy4.0&#x306F;Teensy4.0&#x306E;CircuitPython&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x3002;  </p>
+<p>&#x30FB;python3-Rpi4&#x306F;&#x300C;python3 performanceCircuitPython.py&#x300D;&#x306E;&#x6570;&#x5B57;&#x3001; micropython-Rpi4&#x306F;&#x300C;micropython performanceCircuitPython.py&#x300D;&#x306E;&#x6570;&#x5B57;&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x3002;  </p>
+<p>&#x306A;&#x304A;&#x3001;PC(linux)&#x306E;CPU&#x306F;&#x3001;&#x300C;Intel&#xAE; Core&#x2122; i7-3520M CPU @ 2.90GHz &#xD7; 4 )&#x300D;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p>&#x30FB;STM32&#x7CFB;(F7xx/F4xx/L4xx)&#x304C;ESP32/ESP8266&#x306B;&#x6BD4;&#x3079;&#x3066;&#x30C0;&#x30F3;&#x30C8;&#x30C4;&#x306B;&#x901F;&#x3044;&#x3088;&#x3046;&#x3060;&#x3002; </p>
+<p>&#x30FB;Linux-RpiZero&#x3068;BareMetal-RpiZero&#x306E;&#x6570;&#x5B57;&#x306E;&#x9055;&#x3044;&#x306F;CPU&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x6709;&#x52B9;/&#x7121;&#x52B9;&#x306E;&#x5DEE;&#x3068;&#x601D;&#x308F;&#x308C;&#x308B;&#x3002;</p>
+<p>&#x30FB;CC3200&#x306F;&#x3001;&#x4ED6;&#x306E;MicroPython&#x30DC;&#x30FC;&#x30C9;&#x306B;&#x6BD4;&#x3079;&#x3066;&#x6975;&#x7AEF;&#x306B;&#x9045;&#x3044;&#x7D50;&#x679C;&#x3060;&#x304C;&#x3001;&#x7701;&#x96FB;&#x512A;&#x5148;&#x8A2D;&#x8A08;&#x306E;&#x305B;&#x3044;&#x3060;&#x3068;&#x601D;&#x308F;&#x308C;&#x308B;&#x3002;  </p>
+<p>&#x30FB;Teensy4.0&#x306E;CircuitPython&#x306F;monotonic_ns()&#x306E;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D8;&#x30C3;&#x30C9;&#x304C;&#x5927;&#x304D;&#x3044;&#x6C17;&#x304C;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x30FB;XIAO&#x3068;Circuit-Playground-Express&#x306F;&#x3001;&#x540C;&#x3058;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B5;ATSAMD21(Cortex-M0+,48MHz)&#x306B;&#x3082;&#x304B;&#x304B;&#x308F;&#x3089;&#x305A;&#x3001;&#x6027;&#x80FD;&#x5DEE;&#x304C;&#x51FA;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F;&#x5B9F;&#x88C5;&#x306E;&#x9055;&#x3044;&#x3067;&#x3001;XIAO&#x306E;&#x307B;&#x3046;&#x306F;&#x3001;float&#x3067;&#x52D5;&#x3044;&#x3066;&#x3044;&#x308B;&#x306E;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x3001;Circuit-Playground-Express&#x306E;&#x307B;&#x3046;&#x306F;&#x3001;long_int&#x3067;&#x52D5;&#x3044;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x308B;&#x5DEE;&#x304C;&#x51FA;&#x3066;&#x3044;&#x308B;&#x3068;&#x8003;&#x3048;&#x3066;&#x3044;&#x308B;&#x3002;  </p>
+<p>&#x30FB;Pico-MP,Pico-CPY&#x306F;Cortex-M0&#x3067;&#x3042;&#x308B;&#x304C;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x304C;&#x4ED6;&#x306E;M0&#x3088;&#x308A;&#x9AD8;&#x3044;&#x3053;&#x3068;(&#x6700;&#x5927;133Mz)&#x3068;&#x6D6E;&#x52D5;&#x5C0F;&#x6570;&#x70B9;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x304C;&#x6700;&#x9069;&#x5316;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3067;M4&#x4E26;&#x307F;&#x306E;&#x6027;&#x80FD;&#x304C;&#x51FA;&#x3066;&#x3044;&#x308B;&#x3088;&#x3046;&#x3060;&#x3002;MP,CPY&#x306E;&#x6027;&#x80FD;&#x5DEE;&#x306F;&#x6700;&#x9069;&#x5316;&#x304C;&#x9032;&#x3093;&#x3067;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x5DEE;&#x3068;&#x601D;&#x308F;&#x308C;&#x308B;&#x3002;</p>
+<h2 id="&#x53C2;&#x7167;&#x60C5;&#x5831;">&#x53C2;&#x7167;&#x60C5;&#x5831;</h2>
+<p><a href="https://beta-notes.way-nifty.com/blog/2021/02/post-8de591.html" target="_blank">Pico&#x30DC;&#x30FC;&#x30C9;&#x306B;Micropython/CircuitPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/03/post-4401cb.html" target="_blank">RaspberryPi&#x306E;python3&#x3067;CircuitPython&#x306E;API&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/06/post-a69c8b.html" target="_blank">XIAO&#x306B;CircuitPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/05/post-ad7f42.html" target="_blank">Circuit-Playground-Express&#x306B;CircuitPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/03/post-e033b1.html" target="_blank">Teensy4.0&#x306B;CurcuitPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-573471.html" target="_blank">BareMetal&#x306E;Micropython&#x3092;RaspberryPi_Zero&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x307F;&#x308B;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/05/post-940f3b.html" target="_blank">NUCLEO-F767ZI&#x306B;Micropython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;(v2)</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-5995da.html" target="_blank">Nucleo-L476RG&#x306B;MicroPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-8bfd28.html" target="_blank">Nucleo-F401RE&#x306B;MicroPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-6822aa.html" target="_blank">STM32F4-Discovery&#x300D;&#x306B;MicroPython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/01/post-459022.html" target="_blank">NUCLEO-F446RE&#x306B;Micropython&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;(v2)</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/01/post-459022.html" target="_blank">NUCLEO F446RE MicroPython &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x65B9;&#x6CD5;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-33f0ab.html" target="_blank">CC3200 MicroPython &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-fd9771.html" target="_blank">ESP32&#x306E;MicroPython&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x65B9;&#x6CD5;</a><br><a href="https://beta-notes.way-nifty.com/blog/2020/01/post-8e39c0.html" target="_blank">ESP-WROOM-02 MicroPython &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x65B9;&#x6CD5;</a>  </p>
+<p><a href="https://beta-notes.way-nifty.com/blog/2020/02/post-579c97.html" target="_blank">MicroPython&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x3068;&#x3057;&#x3066;pyboad.py&#x3092;&#x4F7F;&#x3046;</a><br><a href="https://docs.micropython.org/en/latest/reference/pyboard.py.html" target="_blank">The pyboard.py tool</a>  </p>
+<p><a href="http://akizukidenshi.com/catalog/g/gM-11819/" target="_blank">&#xFF25;&#xFF33;&#xFF30;&#xFF13;&#xFF12;&#xFF0D;&#xFF24;&#xFF45;&#xFF56;&#xFF2B;&#xFF49;&#xFF54;&#xFF23;&#x3000;&#xFF25;&#xFF33;&#xFF30;&#xFF0D;&#xFF37;&#xFF32;&#xFF2F;&#xFF2F;&#xFF2D;&#xFF0D;&#xFF13;&#xFF12;&#x958B;&#x767A;&#x30DC;&#x30FC;&#x30C9;</a><br><a href="https://docs.micropython.org/en/latest/esp32/quickref.html#" target="_blank">MicroPython - Quick reference for the ESP32</a>  </p>
+<p><a href="https://blog.goediy.com/?p=335" target="_blank">ampy&#x3092;&#x7528;&#x3044;&#x305F;MicroPython&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x64CD;&#x4F5C;&#x3068;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x5B9F;&#x884C;</a>  </p>
+<p>&#x4EE5;&#x4E0A;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SSD_benchmark.html" class="navigation navigation-prev " aria-label="Previous page: SSD benchmark">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="X11Carbon_linux_install.html" class="navigation navigation-next " aria-label="Next page: ThikPad X1 Carbon Install">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MicroPython/CircuitPython Performance Test","level":"4.2","depth":1,"next":{"title":"ThikPad X1 Carbon Install","level":"4.3","depth":1,"path":"md/X11Carbon_linux_install.md","ref":"md/X11Carbon_linux_install.md","articles":[]},"previous":{"title":"SSD benchmark","level":"4.1","depth":1,"path":"md/SSD_benchmark.md","ref":"md/SSD_benchmark.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"md/mp_cpy_Performance_Test_md.md","mtime":"2022-02-11T08:14:13.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T06:54:11.920Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
